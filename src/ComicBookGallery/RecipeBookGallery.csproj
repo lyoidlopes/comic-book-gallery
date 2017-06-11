@@ -109,7 +109,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\RecipeBook.cs" />
-    <Compile Include="Models\RecipeInfo.cs" />
+    <Compile Include="Models\RecipeIngredient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

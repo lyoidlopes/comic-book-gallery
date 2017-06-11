@@ -1,25 +1,26 @@
-﻿@{
+﻿@model RecipeBookGallery.Models.RecipeBook
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = "Recipie Book Detail";
+    ViewBag.Title = Model.DisplayText;
  
     
 
 }
 
-<h1>@ViewBag.RecipeTitle</h1>
-<h2>Recipe ID : #@ViewBag.RecipieId</h2>
+<h1>@Model.RecipeTitle</h1>
+<h2>Recipe ID : #@Model.RecipeId</h2>
 
 <h5>Description</h5>
-<div>@Html.Raw(ViewBag.Description)</div>
+<div>@Html.Raw(Model.DescritptionHtml)</div>
 
-@if (ViewBag.RecipeInfo.Length > 0)
+@if (Model.RecipeIngredients.Length > 0)
 {
-    <h5>Recipe Info</h5>
+    <h5>Ingredients</h5>
     <div>
         <ul>
-            @foreach (var info in ViewBag.RecipeInfos)
+            @foreach (var ingredient in Model.RecipeIngredients)
             {
-                <li>@info</li>
+                <li>@ingredient.Ingredient: @ingredient.Quantity</li>
 
             }
         </ul>

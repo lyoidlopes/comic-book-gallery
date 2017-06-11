@@ -7,17 +7,22 @@ namespace RecipeBookGallery.Models
 {
     public class RecipeBook
     {
-        public int recipeId { get; set; }
+        public int RecipeId { get; set; }
         public string RecipeTitle { get; set; }
-        public string DescritptoinHtml { get; set; }
-        public RecipeInfo[] RecipeInfos { get; set; }
+        public string DescritptionHtml { get; set; }
+        public RecipeIngredient[] RecipeIngredients { get; set; }
         public bool Favorite { get; set; }
+        public string Chef { get; set; }
+        public string Country { get; set; }
+        public string Course { get; set; }
+        public string Cuisine { get; set; }
+        public string MainIngredients { get; set; }
 
         public string DisplayText
         {
             get
             {
-                return RecipeTitle + " #" + recipeId;
+                return RecipeTitle + " #" + RecipeId;
             }
         }
         // recipie-title-recipeid.jpg
@@ -25,7 +30,7 @@ namespace RecipeBookGallery.Models
         {
             get
             {
-                return RecipeTitle.Replace(" ", "-").ToLower() + "-" + recipeId + ".jpg";
+                return RecipeTitle.Replace(" ", "-").ToLower() + "-" + RecipeId + ".jpg";
             }
         }
 
