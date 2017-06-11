@@ -6,8 +6,6 @@
 
 }
 
-
-
 <h1>@ViewBag.RecipeTitle</h1>
 <h2>Recipe ID : #@ViewBag.RecipieId</h2>
 
@@ -19,7 +17,7 @@
     <h5>Recipe Info</h5>
     <div>
         <ul>
-            @foreach (var info in ViewBag.RecipeInfo)
+            @foreach (var info in ViewBag.RecipeInfos)
             {
                 <li>@info</li>
 
