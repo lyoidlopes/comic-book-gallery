@@ -29,18 +29,20 @@
     <h5>Description</h5>
     <div>@Html.Raw(description)</div>
 
-    <h5>Recipe Info</h5>
+        @if(recipeInfo != null) 
+        {
+        }
 
+    <h5>Recipe Info</h5>
     <div>
         <ul>
+            @foreach (var info in recipeInfo)
+            {
+                <li>@info</li>
 
-
+            }
         </ul>
-        @foreach (var info in recipeInfo)
-        {
-            <text>* @info</text>
-
-        }
+        
 
 
     </div>
