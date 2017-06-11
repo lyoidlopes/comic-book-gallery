@@ -6,8 +6,11 @@ using System.Web.Mvc;
 
 namespace ComicBookGallery.Controllers
 {
-    public class ComicsBooksController : Controller
+     public class ComicsBooksController : Controller
     {
-
+        public string Detail() 
+        {
+            return "Hello This is My Comic Book Store";
+        }
     }
 }
