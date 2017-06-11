@@ -1,14 +1,27 @@
 ﻿@model RecipeBookGallery.Models.RecipeBook
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = Model.DisplayText;
- 
-    
+    ViewBag.Title = Model.DisplayText; 
 
 }
 
 <h1>@Model.RecipeTitle</h1>
 <h2>Recipe ID : #@Model.RecipeId</h2>
+
+<h5>Chef</h5>
+<div>@Model.Chef</div>
+
+<h5>Country</h5>
+<div>@Model.Country</div>
+
+<h5>Course</h5>
+<div>@Model.Course</div>
+
+<h5>Cuisine</h5>
+<div>@Model.Cuisine</div>
+
+<h5>Main Ingredients</h5>
+<div>@Model.MainIngredients</div>
 
 <h5>Description</h5>
 <div>@Html.Raw(Model.DescritptionHtml)</div>

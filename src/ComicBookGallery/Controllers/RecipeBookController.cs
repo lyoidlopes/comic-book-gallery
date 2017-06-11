@@ -16,6 +16,12 @@ namespace RecipeBookGallery.Controllers
                 RecipeId = 10111,
                 RecipeTitle = "How to Make Pancakes",
                 DescritptionHtml = "<p>How to make Chicken Biryani - Chunks of chicken, flavourful spices and long grain basmati rice layered in a handi, sealed and cooked to perfection.</p>",
+                Chef = "Gordon Ramsay",
+                Country = "London",
+                Course = "Rice",
+                Cuisine = "Hyderabadi",
+                Favorite = true,
+                MainIngredients = "Rice and Boneless Chicken",
                 RecipeIngredients = new RecipeIngredient[] 
                 {
                     new RecipeIngredient() {Ingredient = "Boneless chicken", Quantity = "600 Grams"},
