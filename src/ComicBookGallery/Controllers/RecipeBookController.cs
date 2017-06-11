@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ComicBookGallery.Controllers
+namespace RecipeBookGallery.Controllers
 {
-     public class ComicsBooksController : Controller
+     public class RecipeBookController : Controller
     {
         public ActionResult Detail() 
         {

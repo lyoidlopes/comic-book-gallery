@@ -30,7 +30,20 @@
     <div>@Html.Raw(description)</div>
 
     <h5>Recipe Info</h5>
-    <div>@recipeInfo</div>
+
+    <div>
+        <ul>
+
+
+        </ul>
+        @foreach (var info in recipeInfo)
+        {
+            <text>* @info</text>
+
+        }
+
+
+    </div>
 
 
 
