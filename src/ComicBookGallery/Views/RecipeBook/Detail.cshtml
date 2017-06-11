@@ -1,16 +1,6 @@
 ﻿@{
     Layout = null;
-    var recipeTitle = "How to Make Ciken Biryani";
-    var recipieId = 101;
-    var description = "<p>How to make Chicken Biryani - Chunks of chicken, flavourful spices and long grain basmati rice layered in a handi, sealed and cooked to perfection.</p>";
-    var recipeInfo = new string[]
-        {
-            "Chef: Lyoid Lopes",
-            "Country: India",
-            "Course: Rice",
-            "Cuisine: Hyderabadi",
-            "Main Ingredients: Boneless Chicken, Basmati Rice"
-        };
+    
 
 }
 
@@ -23,29 +13,27 @@
 </head>
 <body>
     <div>
-    <h1>@recipeTitle</h1>
-    <h2>Recipe ID : #@recipieId</h2>
+    <h1>@ViewBag.RecipeTitle</h1>
+    <h2>Recipe ID : #@ViewBag.RecipieId</h2>
 
     <h5>Description</h5>
-    <div>@Html.Raw(description)</div>
+    <div>@Html.Raw(ViewBag.Description)</div>
 
-        @if(recipeInfo != null) 
+        @if (ViewBag.RecipeInfo.Length > 0)
         {
+            <h5>Recipe Info</h5>
+            <div>
+                <ul>
+                    @foreach (var info in ViewBag.RecipeInfo)
+                    {
+                        <li>@info</li>
+
+                    }
+                </ul>
+            </div>
         }
 
-    <h5>Recipe Info</h5>
-    <div>
-        <ul>
-            @foreach (var info in recipeInfo)
-            {
-                <li>@info</li>
-
-            }
-        </ul>
-        
-
-
-    </div>
+    
 
 
 
